@@ -1,0 +1,101 @@
+body {
+  display: grid;
+  /* place-items: center; */
+}
+
+a.camera:link,
+a.camera:visited,
+a.camera:hover,
+a.camera:active {
+  color: var(--primary);
+  text-decoration: none;  
+}
+
+a.selected {
+  font-weight: bold;
+}
+
+img.photo:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.slider {
+  z-index: 300;
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.modal-main {
+  z-index:200;
+  position:fixed;
+  background: white;
+  width: 800px;
+  max-width: 800px;
+  height: auto;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.modal-display-block {
+  display: block;
+}
+
+.modal-display-none {
+  display: none;
+}

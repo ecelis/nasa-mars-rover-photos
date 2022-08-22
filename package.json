@@ -1,0 +1,26 @@
+{
+  "name": "nasa-mars-rover-photos",
+  "version": "1.0.0",
+  "description": "Display Mars photos",
+  "main": "index.js",
+  "scripts": {
+    "test": "(cd back ; npm start & sleep 3 && jest); (cd front && jest);",
+    "postinstall": "(cd back && npm install); (cd front && npm install);",
+    "clean": "rm -rf **/node_modules back/public/* front/build*",
+    "start": "(cd front && npm run build); (cp -R front/build/* back/public); (cd back && node ./bin/www);"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecelis/nasa-mars-rover-photos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ecelis/nasa-mars-rover-photos/issues"
+  },
+  "homepage": "https://github.com/ecelis/nasa-mars-rover-photos#readme",
+  "devDependencies": {
+    "jest": "^28.1.3",
+    "nodemon": "^2.0.19"
+  }
+}
