@@ -26,8 +26,8 @@ Edit `back/.env` and change at least **NASA_API_KEY** with a valid one.
 
 ```
 NASA_API_KEY=DEMO
+NASA_API=https://api.nasa.gov/mars-photos/api/v1/
 JWT_SECRET=verylongrandomstring
-***REMOVED***
 ```
 
 By default the project will run a production build of the frontend hosted in the expressjs backend. So expect the startime to take some time.
